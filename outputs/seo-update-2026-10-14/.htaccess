@@ -1,0 +1,4 @@
+# Redirect the non-www domain to the preferred HTTPS www address.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^stevenkruse\.com$ [NC]
+RewriteRule ^ https://www.stevenkruse.com%{REQUEST_URI} [R=301,L,NE]

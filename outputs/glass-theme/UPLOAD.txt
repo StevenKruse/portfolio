@@ -1,0 +1,17 @@
+Glass theme update
+
+Extract glass-theme-upload.zip and upload all five files to your website root, preserving their folders:
+
+index.html
+assets/css/theme.css
+assets/css/glass.css
+assets/js/smoothscroll.js
+ux-process/ux-process.html
+
+Refresh the page after uploading. The local index.html also loads these files directly.
+
+Changes: frosted light and smoked dark panels, ambient gradient backgrounds, glass navigation and controls, photo cutout, client logo blending, responsive dialogs, and solid-surface fallbacks.
+
+Checked desktop and phone layouts, both themes, portfolio filtering and image preview, UX Process and CV dialogs, and keyboard theme controls after closing dialogs.
+
+Mobile resume fix: date badges now fit their text and align above the cards in both themes. Includes a new glass.css version to refresh the cached stylesheet. Checked phone, tablet, and desktop layouts.

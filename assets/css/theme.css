@@ -1,0 +1,401 @@
+/* Shared theme colors. The original stylesheet supplies the light palette. */
+:root {
+    color-scheme: light;
+    --theme-bg: #fff;
+    --theme-surface: #f7f7f7;
+    --theme-text: #282828;
+    --theme-border: #ddd;
+    --theme-accent: #68c3a3;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --theme-bg: #161b20;
+    --theme-surface: #20272e;
+    --theme-text: #e4e9ed;
+    --theme-muted: #b4c0c9;
+    --theme-border: #39454f;
+    --theme-accent: #83d8b8;
+    --theme-on-accent: #12271f;
+}
+
+/* Keep the switch beside the menu, including when navigation is collapsed. */
+.navbar-custom > .container {
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--theme-border);
+    border-radius: 50%;
+    background: var(--theme-bg);
+    color: var(--theme-text);
+    line-height: 1;
+    z-index: 1;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+    background: var(--theme-surface);
+    color: var(--theme-text);
+    border-color: var(--theme-accent);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--theme-accent);
+    outline-offset: 3px;
+}
+
+.theme-toggle[hidden],
+.theme-icon-sun,
+[data-theme="dark"] .theme-icon-moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .navbar-custom .navbar-collapse {
+        padding-right: 74px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-custom .navbar-nav > li > a {
+        padding-right: 11px;
+        padding-left: 11px;
+        font-size: 13px;
+    }
+}
+
+/* Collapse at tablet widths so the logo, links and switch have enough room. */
+@media (max-width: 991px) {
+    .navbar-custom .navbar-header {
+        float: none;
+        min-height: 60px;
+    }
+
+    .navbar-custom .navbar-brand {
+        max-width: calc(100% - 116px);
+        height: auto;
+        padding: 15px;
+    }
+
+    .navbar-custom .navbar-toggle {
+        display: block;
+        min-height: 44px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background: transparent;
+        color: var(--theme-text);
+    }
+
+    .theme-toggle {
+        right: 73px;
+    }
+
+    .navbar-custom .navbar-collapse {
+        clear: both;
+        border-top: 1px solid var(--theme-border);
+        box-shadow: none;
+    }
+
+    .navbar-custom .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-custom .navbar-collapse.in {
+        display: block !important;
+    }
+
+    .navbar-custom .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+
+    .navbar-custom .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-custom .navbar-nav > li > a {
+        padding: 10px 15px;
+    }
+}
+
+/* Main surfaces and type. Photograph and portfolio colors stay intact. */
+[data-theme="dark"] body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+}
+
+[data-theme="dark"] .header,
+[data-theme="dark"] .navbar-custom,
+[data-theme="dark"] .navbar-custom .dropdown-menu,
+[data-theme="dark"] #tt-preloader,
+[data-theme="dark"] .timeline > li .posted-date {
+    background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .works-section,
+[data-theme="dark"] .biography,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .portfolio-bg,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .ux-process-popup .mfp-iframe-scaler,
+[data-theme="dark"] .ux-process-popup .mfp-iframe {
+    background-color: var(--theme-surface);
+}
+
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .navbar-custom .navbar-nav > li > a,
+[data-theme="dark"] .navbar-custom .dropdown-menu > li > a,
+[data-theme="dark"] .timeline > li .posted-date .month,
+[data-theme="dark"] .ux-process-popup .mfp-close {
+    color: var(--theme-text);
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] #filter li a,
+[data-theme="dark"] ul.list-check li::before,
+[data-theme="dark"] .navbar-custom .navbar-nav > li.active > a,
+[data-theme="dark"] .navbar-custom .nav li a:hover,
+[data-theme="dark"] .navbar-custom .nav li a:focus {
+    color: var(--theme-accent);
+}
+
+[data-theme="dark"] a:hover,
+[data-theme="dark"] a:focus {
+    color: #b0efda;
+}
+
+[data-theme="dark"] .header,
+[data-theme="dark"] .header::after,
+[data-theme="dark"] .navbar-custom .dropdown-menu,
+[data-theme="dark"] .navbar-custom .dropdown-menu > li,
+[data-theme="dark"] .biography,
+[data-theme="dark"] .biography::after,
+[data-theme="dark"] .biography ul li,
+[data-theme="dark"] .timeline > li .timeline-panel,
+[data-theme="dark"] .timeline-content::after,
+[data-theme="dark"] .portfolio-bg,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer,
+[data-theme="dark"] .ux-process-dialog-header,
+[data-theme="dark"] .location-map {
+    border-color: var(--theme-border);
+}
+
+[data-theme="dark"] .navbar-custom .nav .open > a,
+[data-theme="dark"] .navbar-custom .dropdown-menu > li > a:hover,
+[data-theme="dark"] .navbar-custom .dropdown-menu > li > a:focus {
+    background-color: var(--theme-surface);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-toggle .icon-bar,
+[data-theme="dark"] .resume::before,
+[data-theme="dark"] .resume::after,
+[data-theme="dark"] .timeline::before {
+    background-color: var(--theme-muted);
+}
+
+/* Transparent dark artwork needs a lighter treatment on a dark surface. */
+[data-theme="dark"] .navbar-brand img,
+[data-theme="dark"] .my-signature img {
+    filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .section-title::after {
+    filter: brightness(0) invert(1);
+    opacity: .35;
+}
+
+[data-theme="dark"] .myphoto {
+    background-image: none;
+}
+
+[data-theme="dark"] .myphoto img {
+    z-index: 0;
+}
+
+/* Embed the original frame so direct file:// previews need no external mask request. */
+.myphoto {
+    --photo-frame-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAACgCAYAAAB9o7WcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjczMDkzMEM5RTNGMTFFNEEwMzlGQjM2OUFERDhCRkQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjczMDkzMEI5RTNGMTFFNEEwMzlGQjM2OUFERDhCRkQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwOThCQjM5OUVCMjExRTQ5NUIzODVCMUUxNzA0Qzc2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwOThCQjNBOUVCMjExRTQ5NUIzODVCMUUxNzA0Qzc2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+NkSXAgAAD1RJREFUeNrsnYmPlOUd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");
+}
+
+[data-theme="dark"] .myphoto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: var(--theme-surface);
+    -webkit-mask: var(--photo-frame-mask) bottom center / contain no-repeat;
+    mask: var(--photo-frame-mask) bottom center / contain no-repeat;
+    pointer-events: none;
+}
+
+/* Light monochrome logos blend embedded white backgrounds into the dark surface. */
+[data-theme="dark"] .customer-logos .slide {
+    background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .customer-logos img {
+    filter: grayscale(1) invert(1) brightness(2);
+    mix-blend-mode: screen;
+}
+
+[data-theme="dark"] .portfolio > img,
+[data-theme="dark"] .mfp-img {
+    background-color: #fff;
+}
+
+[data-theme="dark"] .form-control {
+    background-color: var(--theme-surface);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: var(--theme-muted);
+    opacity: 1;
+}
+
+[data-theme="dark"] .form-control:focus {
+    border-color: var(--theme-accent);
+    box-shadow: 0 0 0 2px rgba(131, 216, 184, .2);
+}
+
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-info,
+[data-theme="dark"] #filter li a.active,
+[data-theme="dark"] #filter li a:hover,
+[data-theme="dark"] .scroll-up a {
+    background-color: var(--theme-accent);
+    color: var(--theme-on-accent);
+    border-color: rgba(0, 0, 0, .2);
+}
+
+[data-theme="dark"] .btn-info {
+    background-color: #7ac9e5;
+    color: #112832;
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus,
+[data-theme="dark"] .btn-info:hover,
+[data-theme="dark"] .btn-info:focus,
+[data-theme="dark"] .scroll-up a:hover {
+    background-color: #b0efda;
+    color: var(--theme-on-accent);
+}
+
+[data-theme="dark"] #filter li a.active::after,
+[data-theme="dark"] #filter li a:hover::after {
+    border-top-color: var(--theme-accent);
+}
+
+[data-theme="dark"] .hire-section .btn-default {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+[data-theme="dark"] .hire-section .btn-default:hover,
+[data-theme="dark"] .hire-section .btn-default:focus {
+    background-color: var(--theme-surface);
+    border-color: var(--theme-accent);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+    background-color: #293b36;
+    color: var(--theme-text);
+}
+
+[data-theme="dark"] .close {
+    color: var(--theme-text);
+    text-shadow: none;
+    opacity: .8;
+}
+
+[data-theme="dark"] .close:hover,
+[data-theme="dark"] .close:focus {
+    color: var(--theme-accent);
+    opacity: 1;
+}
+
+[data-theme="dark"] .timeline > li .timeline-content:hover {
+    background-color: #293b36;
+    color: var(--theme-text);
+}
+
+@media (min-width: 992px) {
+    [data-theme="dark"] .timeline > li .timeline-panel::before {
+        border-left-color: var(--theme-border);
+    }
+
+    [data-theme="dark"] .timeline > li .timeline-panel::after {
+        border-left-color: var(--theme-surface);
+    }
+
+    [data-theme="dark"] .timeline > li.timeline-inverted .timeline-panel::before {
+        border-right-color: var(--theme-border);
+    }
+
+    [data-theme="dark"] .timeline > li.timeline-inverted .timeline-panel::after {
+        border-right-color: var(--theme-surface);
+    }
+
+    [data-theme="dark"] .timeline > li .timeline-panel:hover::after {
+        border-left-color: #293b36;
+    }
+
+    [data-theme="dark"] .timeline > li.timeline-inverted .timeline-panel:hover::after {
+        border-right-color: #293b36;
+    }
+}
+
+/* The same preference also styles the local page inside the UX Process dialog. */
+[data-theme="dark"] .ux-design-services .page-header,
+[data-theme="dark"] .ux-design-services .introduce,
+[data-theme="dark"] .ux-design-services .design-services,
+[data-theme="dark"] .ux-design-services .design-processes,
+[data-theme="dark"] .ux-design-services .footer {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+}
+
+[data-theme="dark"] .ux-design-services h1,
+[data-theme="dark"] .ux-design-services h2,
+[data-theme="dark"] .ux-design-services h3,
+[data-theme="dark"] .ux-design-services .text-container p {
+    color: var(--theme-text);
+}
+
+[data-theme="dark"] .ux-design-services .page-header {
+    background-image: linear-gradient(99deg, #1f6548, #205e73);
+    border-bottom: 1px solid var(--theme-border);
+}
+
+[data-theme="dark"] .ux-design-services .step .label {
+    background-color: var(--theme-surface);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+[data-theme="dark"] a:focus-visible,
+[data-theme="dark"] button:focus-visible,
+[data-theme="dark"] .btn:focus-visible {
+    outline: 2px solid var(--theme-accent);
+    outline-offset: 3px;
+}

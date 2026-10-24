@@ -1,0 +1,1055 @@
+/* Glass surfaces share one palette across the portfolio and UX Process page. */
+:root {
+    --glass-page: #edf4f2;
+    --glass-text: #253e38;
+    --glass-muted: #516860;
+    --glass-accent: #286e55;
+    --glass-blue: #246b86;
+    --glass-surface: rgba(255, 255, 255, .34);
+    --glass-strong: rgba(255, 255, 255, .52);
+    --glass-nav: rgba(248, 253, 250, .86);
+    --glass-field: rgba(255, 255, 255, .68);
+    --glass-fallback: #f5faf7;
+    --glass-edge: rgba(255, 255, 255, .64);
+    --glass-outline: rgba(53, 96, 79, .19);
+    --glass-tint: rgba(65, 149, 111, .1);
+    --glass-track: rgba(48, 105, 84, .18);
+    --glass-shadow: 0 16px 44px rgba(35, 79, 60, .08), inset 0 1px 0 rgba(255, 255, 255, .85), inset 1px 0 0 rgba(255, 255, 255, .28);
+    --glass-sheen: linear-gradient(125deg, rgba(255, 255, 255, .24), rgba(255, 255, 255, .065) 38%, transparent 65%, rgba(255, 255, 255, .1));
+    --glass-glow: rgba(73, 173, 132, .2);
+    --glass-banner-start: #31795c;
+    --glass-banner-end: #2c7186;
+    --glass-blur: 24px;
+    --glass-ambient: radial-gradient(ellipse at 8% 8%, rgba(131, 220, 176, .42), transparent 52%), radial-gradient(ellipse at 94% 52%, rgba(135, 201, 231, .35), transparent 52%), radial-gradient(ellipse at 20% 95%, rgba(198, 226, 171, .35), transparent 52%);
+}
+
+:root[data-theme="dark"] {
+    --glass-page: #101d23;
+    --glass-text: #e6f2ed;
+    --glass-muted: #b5ccc3;
+    --glass-accent: #a0e7c9;
+    --glass-blue: #97dcec;
+    --glass-surface: rgba(26, 47, 53, .28);
+    --glass-strong: rgba(24, 44, 51, .4);
+    --glass-nav: rgba(17, 34, 40, .86);
+    --glass-field: rgba(10, 27, 33, .48);
+    --glass-fallback: #20363d;
+    --glass-edge: rgba(209, 255, 237, .3);
+    --glass-outline: rgba(168, 226, 207, .22);
+    --glass-tint: rgba(128, 220, 181, .1);
+    --glass-track: rgba(171, 229, 210, .2);
+    --glass-shadow: 0 18px 48px rgba(0, 10, 16, .2), inset 0 1px 0 rgba(214, 255, 237, .3), inset 1px 0 0 rgba(214, 255, 237, .08);
+    --glass-sheen: linear-gradient(125deg, rgba(214, 255, 237, .1), rgba(214, 255, 237, .025) 38%, transparent 65%, rgba(151, 220, 236, .04));
+    --glass-glow: rgba(99, 207, 169, .18);
+    --glass-banner-start: #1f6548;
+    --glass-banner-end: #205e73;
+    --glass-ambient: radial-gradient(ellipse at 8% 8%, rgba(54, 142, 105, .34), transparent 52%), radial-gradient(ellipse at 94% 52%, rgba(40, 117, 153, .32), transparent 52%), radial-gradient(ellipse at 20% 95%, rgba(76, 121, 90, .25), transparent 52%);
+}
+
+body.portfolio-page,
+body.ux-design-services {
+    color: var(--glass-text);
+    background-color: var(--glass-page);
+    background-image: var(--glass-ambient);
+    background-attachment: fixed;
+}
+
+.portfolio-page a {
+    color: var(--glass-accent);
+}
+
+.portfolio-page a:hover,
+.portfolio-page a:focus {
+    color: var(--glass-text);
+}
+
+.portfolio-page .glass-panel,
+.portfolio-page .modal-content,
+.portfolio-page .ux-process-popup .mfp-iframe-scaler,
+.ux-design-services .glass-panel {
+    color: var(--glass-text);
+    background: var(--panel-fallback, var(--glass-fallback));
+    border: 1px solid var(--glass-edge);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+}
+
+.portfolio-page .header,
+.portfolio-page .navbar-custom .dropdown-menu,
+.portfolio-page .footer-wrapper,
+:root .ux-design-services .footer {
+    color: var(--glass-text);
+    background: var(--glass-fallback);
+    border-color: var(--glass-outline);
+}
+
+/* A solid surface remains readable when backdrop blur is unavailable. */
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .portfolio-page .glass-panel,
+    .portfolio-page .modal-content,
+    .portfolio-page .ux-process-popup .mfp-iframe-scaler,
+    .ux-design-services .glass-panel {
+        background: var(--glass-sheen), var(--panel-fill, var(--glass-surface));
+        -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+        backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+    }
+
+    .portfolio-page .header,
+    .portfolio-page .navbar-custom .dropdown-menu,
+    .portfolio-page .footer-wrapper,
+    :root .ux-design-services .footer {
+        background: var(--glass-nav);
+        -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(135%);
+        backdrop-filter: blur(var(--glass-blur)) saturate(135%);
+    }
+}
+
+.portfolio-page .section-padding {
+    padding: 88px 0;
+}
+
+.portfolio-page .about-section,
+.portfolio-page .resume-section,
+.portfolio-page .skills-section,
+.portfolio-page .works-section,
+.portfolio-page .latest-blog-section,
+.portfolio-page .contact-section {
+    color: var(--glass-text);
+    background: transparent;
+}
+
+.portfolio-page .section-title {
+    color: var(--glass-text);
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    letter-spacing: .015em;
+    margin-bottom: 68px;
+}
+
+.portfolio-page .section-title::after {
+    bottom: -30px;
+    filter: brightness(0);
+    opacity: .24;
+}
+
+[data-theme="dark"] .portfolio-page .section-title::after {
+    filter: brightness(0) invert(1);
+    opacity: .3;
+}
+
+.portfolio-page .header {
+    border-bottom: 1px solid var(--glass-outline);
+    padding-bottom: 0;
+    box-shadow: 0 8px 28px rgba(12, 44, 34, .08);
+}
+
+.portfolio-page .header::after,
+.portfolio-page .biography::after,
+.portfolio-page .timeline-content::after,
+.portfolio-page .timeline > li .timeline-panel::before,
+.portfolio-page .timeline > li .timeline-panel::after {
+    display: none;
+}
+
+.portfolio-page .navbar-custom {
+    background: transparent;
+}
+
+.portfolio-page .navbar-custom .navbar-nav > li > a,
+.portfolio-page .navbar-custom .dropdown-menu > li > a {
+    color: var(--glass-text);
+}
+
+.portfolio-page .navbar-custom .navbar-nav > li.active > a,
+.portfolio-page .navbar-custom .nav li a:hover,
+.portfolio-page .navbar-custom .nav li a:focus {
+    color: var(--glass-accent);
+    background: var(--glass-tint);
+}
+
+.portfolio-page .navbar-custom .dropdown-menu {
+    border-radius: 14px;
+    box-shadow: var(--glass-shadow);
+}
+
+.portfolio-page .theme-toggle {
+    background: var(--glass-field);
+    border-color: var(--glass-outline);
+    color: var(--glass-text);
+    box-shadow: inset 0 1px 0 var(--glass-edge);
+}
+
+.portfolio-page .theme-toggle:hover,
+.portfolio-page .theme-toggle:focus {
+    background: var(--glass-tint);
+    border-color: var(--glass-accent);
+}
+
+.portfolio-page #home {
+    min-height: 700px;
+}
+
+.portfolio-page #home::before {
+    background: rgba(15, 30, 35, .48);
+}
+
+.portfolio-page .intro {
+    --panel-fill: var(--glass-strong);
+    width: calc(100% - 48px);
+    max-width: 1000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 42px 38px;
+    border-radius: 32px;
+}
+
+.portfolio-page .intro h1 {
+    color: var(--glass-blue);
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.15;
+}
+
+.portfolio-page .intro h1 span {
+    color: var(--glass-accent);
+}
+
+.portfolio-page .intro-sub {
+    color: var(--glass-text);
+    font-size: 22px;
+    line-height: 1.45;
+}
+
+.portfolio-page .intro p {
+    color: var(--glass-text);
+    margin-bottom: 28px;
+}
+
+.portfolio-page .social-icons a i {
+    color: var(--glass-text);
+}
+
+.portfolio-page .social-icons a i::after {
+    border-color: var(--glass-outline);
+    background: var(--glass-field);
+}
+
+.portfolio-page .social-icons a i:hover::after {
+    background: var(--glass-tint);
+    border-color: var(--glass-accent);
+}
+
+.portfolio-page .goog-te-gadget-simple {
+    background: var(--glass-field);
+    border: 1px solid var(--glass-outline);
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.portfolio-page .goog-te-gadget-simple a,
+.portfolio-page .goog-te-gadget-simple span {
+    color: var(--glass-text) !important;
+}
+
+.portfolio-page #google_translate_element a img {
+    width: 1px;
+    height: 1px;
+}
+
+@keyframes glass-reveal {
+    from { opacity: 0; translate: 0 18px; }
+    to { opacity: 1; translate: 0 0; }
+}
+
+/* Only JavaScript-observed cards are hidden; content stays visible without it. */
+.portfolio-page .scroll-reveal {
+    opacity: 0;
+    /* Keep layout transforms, such as the video card's centering, intact. */
+    translate: 0 18px;
+}
+
+.portfolio-page .scroll-reveal.is-revealed {
+    opacity: 1;
+    translate: 0 0;
+    animation: glass-reveal .55s ease-out var(--reveal-delay, 5ms) backwards;
+}
+
+.portfolio-page .scroll-reveal:focus-within {
+    opacity: 1;
+    translate: none;
+    animation: none;
+}
+
+.portfolio-page .short-info {
+    --panel-fill: var(--glass-strong);
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.portfolio-page .short-info h3 {
+    margin-bottom: 22px;
+}
+
+.portfolio-page .short-info p {
+    line-height: 1.9;
+}
+
+.portfolio-page ul.list-check li::before {
+    color: var(--glass-accent);
+}
+
+.portfolio-page .biography {
+    overflow: hidden;
+}
+
+.portfolio-page .biography ul {
+    padding: 22px;
+}
+
+.portfolio-page .biography ul li {
+    border-color: var(--glass-outline);
+    overflow-wrap: anywhere;
+}
+
+/* Cut out the photo itself, leaving the glass visible through the same frame. */
+.portfolio-page .myphoto {
+    background: none;
+}
+
+.portfolio-page .myphoto::after {
+    display: none;
+}
+
+.portfolio-page .myphoto img {
+    display: block;
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 66.27%, 50% 100%, 0 66.27%);
+}
+
+@supports ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
+    .portfolio-page .myphoto img {
+        clip-path: none;
+        -webkit-mask-image: linear-gradient(#000, #000), var(--photo-frame-mask);
+        mask-image: linear-gradient(#000, #000), var(--photo-frame-mask);
+        -webkit-mask-position: center, bottom center;
+        mask-position: center, bottom center;
+        -webkit-mask-size: 100% 100%, contain;
+        mask-size: 100% 100%, contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+.portfolio-page .timeline > li .timeline-panel {
+    border: 0;
+}
+
+.portfolio-page .timeline-content {
+    padding: 26px;
+}
+
+.portfolio-page .timeline > li .timeline-content:hover {
+    color: var(--glass-text);
+    background-color: var(--glass-strong);
+    border-color: var(--glass-accent);
+}
+
+.portfolio-page .timeline > li .posted-date {
+    color: var(--glass-text);
+    background: var(--glass-fallback);
+    padding: 8px;
+    border: 1px solid var(--glass-outline);
+    border-radius: 12px;
+    box-shadow: inset 0 1px 0 var(--glass-edge);
+}
+
+.portfolio-page .timeline > li .posted-date .month {
+    color: var(--glass-accent);
+    float: none;
+    white-space: nowrap;
+}
+
+.portfolio-page .timeline::before,
+.portfolio-page .resume::before,
+.portfolio-page .resume::after {
+    background-color: var(--glass-outline);
+}
+
+.portfolio-page .skills-panel,
+.portfolio-page .clients-panel {
+    padding: 44px;
+}
+
+.portfolio-page .skills-section .section-title,
+.portfolio-page .skills-section .section-title h2 {
+    color: var(--glass-text);
+}
+
+.portfolio-page .progress {
+    background: var(--glass-track);
+    border-radius: 20px;
+}
+
+.portfolio-page .progress-bar {
+    background: linear-gradient(90deg, #428f70, #8bdbb6);
+    border-radius: inherit;
+}
+
+.portfolio-page .progress-bar span {
+    color: var(--glass-muted);
+}
+
+.portfolio-page .chart {
+    background: var(--glass-tint);
+    border-radius: 50%;
+}
+
+/* The gallery uses a light glass frame, avoiding a blur layer per image. */
+.portfolio-page .portfolio-bg {
+    padding: 8px;
+    border: 1px solid var(--glass-edge);
+    border-radius: 16px;
+    background: var(--glass-sheen), var(--glass-surface);
+    box-shadow: 0 8px 22px rgba(13, 43, 34, .1), inset 0 1px 0 var(--glass-edge);
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.portfolio-page .portfolio-bg:hover {
+    border-color: var(--glass-accent);
+    box-shadow: 0 14px 28px var(--glass-glow);
+}
+
+.portfolio-page .portfolio,
+.portfolio-page .portfolio > img {
+    border-radius: 9px;
+}
+
+.portfolio-page #filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.portfolio-page #filter li {
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-page #filter li a {
+    padding: 7px 18px;
+    color: var(--glass-text);
+    background: var(--glass-surface);
+    border: 1px solid var(--glass-outline);
+    border-radius: 24px;
+}
+
+.portfolio-page #filter li a.active,
+.portfolio-page #filter li a:hover,
+.portfolio-page #filter li a:focus {
+    color: #123d2d;
+    background: #99dfbf;
+    border-color: #78c6a3;
+}
+
+.portfolio-page #filter li a::after {
+    display: none;
+}
+
+.portfolio-page .tt-overlay-bg,
+.portfolio-page .tf-bg-overlay {
+    background: rgba(13, 31, 34, .4);
+}
+
+.portfolio-page .video-section .tf-bg-overlay {
+    min-height: 500px;
+}
+
+/* The photo is already darkened; keep its detail visible through light glass. */
+:root:not([data-theme="dark"]) .portfolio-page .video-section .tf-bg-overlay {
+    background: rgba(237, 244, 242, .12);
+}
+
+.portfolio-page .video-intro {
+    --panel-fill: var(--glass-surface);
+    --glass-blur: 14px;
+    width: min(680px, calc(100% - 32px));
+    padding: 36px 24px;
+}
+
+.portfolio-page .video-intro a {
+    color: var(--glass-accent);
+    background: var(--glass-field);
+    border: 1px solid var(--glass-outline);
+    border-radius: 16px;
+}
+
+.portfolio-page .video-intro a:hover,
+.portfolio-page .video-intro a:focus {
+    color: var(--glass-text);
+    background: var(--glass-strong);
+    border-color: var(--glass-accent);
+}
+
+.portfolio-page .count-wrap {
+    display: flow-root;
+    padding: 36px 12px;
+}
+
+.portfolio-page .count-wrap i {
+    color: var(--glass-accent);
+    font-size: 48px;
+}
+
+.portfolio-page .count-wrap h3 {
+    font-size: 42px;
+}
+
+/* Blend the carousel as one layer, avoiding individual opaque logo mats. */
+.portfolio-page .customer-logos {
+    padding: 10px 0;
+}
+
+.portfolio-page .customer-logos .slide {
+    background: transparent;
+}
+
+.portfolio-page .customer-logos img {
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+.portfolio-page .customer-logos .slick-list {
+    mix-blend-mode: multiply;
+}
+
+[data-theme="dark"] .portfolio-page .customer-logos img {
+    filter: grayscale(1) invert(1) brightness(2);
+    mix-blend-mode: normal;
+}
+
+[data-theme="dark"] .portfolio-page .customer-logos .slick-list {
+    mix-blend-mode: screen;
+}
+
+.portfolio-page .hire-section-bg {
+    background: linear-gradient(110deg, rgba(46, 104, 80, .3), rgba(34, 96, 117, .35));
+    padding: 80px 0;
+}
+
+.portfolio-page .hire-panel {
+    --panel-fill: var(--glass-strong);
+    float: none;
+    max-width: 760px;
+    padding: 40px 28px;
+    margin: 0 auto;
+}
+
+.portfolio-page .hire-panel h2 {
+    color: var(--glass-text);
+    line-height: 1.35;
+}
+
+.portfolio-page .contact-form,
+.portfolio-page .contact-details {
+    --panel-fill: var(--glass-strong);
+    padding: 28px;
+}
+
+.portfolio-page .contact-form strong {
+    margin-bottom: 24px;
+}
+
+.portfolio-page .contact-details {
+    overflow-wrap: anywhere;
+}
+
+.portfolio-page .contact-details i {
+    color: var(--glass-accent);
+}
+
+.portfolio-page .form-control {
+    background: var(--glass-field);
+    color: var(--glass-text);
+    border: 1px solid var(--glass-outline);
+    border-radius: 10px;
+    box-shadow: inset 0 1px 3px rgba(10, 45, 30, .04);
+}
+
+.portfolio-page .form-control::placeholder {
+    color: var(--glass-muted);
+}
+
+.portfolio-page .form-control:focus {
+    border-color: var(--glass-accent);
+    box-shadow: 0 0 0 3px var(--glass-glow);
+}
+
+.portfolio-page .location-map {
+    padding: 6px;
+    background: var(--glass-field);
+    border: 1px solid var(--glass-outline);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.portfolio-page .map-canvas {
+    border-radius: 10px;
+}
+
+.portfolio-page .btn,
+.portfolio-page .hire-section .btn-default {
+    color: var(--glass-text);
+    background: var(--glass-surface);
+    background-image: linear-gradient(rgba(255, 255, 255, .14), transparent);
+    border: 1px solid var(--glass-outline);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(16, 57, 38, .08), inset 0 1px 0 var(--glass-edge);
+}
+
+.portfolio-page .btn-primary {
+    color: #143c2d;
+    background-color: #99dfbf;
+    border-color: #78c6a3;
+}
+
+.portfolio-page .btn-info {
+    color: #193e49;
+    background-color: #a4d9e5;
+    border-color: #83bdcc;
+}
+
+.portfolio-page .btn:hover,
+.portfolio-page .btn:focus,
+.portfolio-page .hire-section .btn-default:hover,
+.portfolio-page .hire-section .btn-default:focus {
+    color: var(--glass-text);
+    background: var(--glass-strong);
+    border-color: var(--glass-accent);
+    box-shadow: 0 8px 24px var(--glass-glow), inset 0 1px 0 var(--glass-edge);
+}
+
+.portfolio-page .footer-wrapper,
+.ux-design-services .footer {
+    padding: 30px 18px;
+    border-top: 1px solid var(--glass-outline);
+}
+
+.portfolio-page .scroll-up a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--glass-strong);
+    color: var(--glass-accent);
+    border: 1px solid var(--glass-outline);
+    border-radius: 12px;
+    box-shadow: var(--glass-shadow);
+}
+
+.portfolio-page #myModal {
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(7, 22, 26, .6);
+}
+
+.portfolio-page .modal-content {
+    --panel-fill: var(--glass-strong);
+    width: min(680px, 100%);
+    margin: 8vh auto;
+    padding: 0;
+    overflow: hidden;
+    animation: glass-reveal .25s ease-out;
+}
+
+.portfolio-page .modal-header,
+.portfolio-page .modal-footer {
+    padding: 22px;
+    color: var(--glass-text);
+    background: var(--glass-tint);
+    border-color: var(--glass-outline);
+}
+
+.portfolio-page .modal-header h2 {
+    padding-right: 30px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.portfolio-page .modal-body {
+    padding: 22px;
+}
+
+.portfolio-page .modal-footer h3 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.portfolio-page .close {
+    color: var(--glass-text);
+    background: transparent;
+    padding: 0;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.portfolio-page .ux-process-popup .mfp-iframe-scaler {
+    overflow: hidden;
+}
+
+.portfolio-page .ux-process-dialog-header {
+    color: var(--glass-text);
+    background: var(--glass-tint);
+    border-color: var(--glass-outline);
+}
+
+.portfolio-page .ux-process-popup .mfp-close {
+    color: var(--glass-text);
+    background: transparent;
+}
+
+.portfolio-page .ux-process-popup .mfp-iframe {
+    background: transparent;
+}
+
+.portfolio-page .mfp-with-zoom .mfp-close {
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    right: 12px;
+    padding: 0;
+    color: var(--glass-text);
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-outline);
+    border-radius: 50%;
+    line-height: 44px;
+    text-align: center;
+    opacity: 1;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.portfolio-page .mfp-with-zoom .mfp-iframe-scaler {
+    border: 1px solid var(--glass-edge);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+}
+
+/* The iframe has its own glass layers over the same ambient theme background. */
+:root .ux-design-services .page-header {
+    margin: 24px 24px 0;
+    padding: 40px 12px;
+    border: 1px solid var(--glass-edge);
+    border-radius: 24px;
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, .12), transparent 55%), linear-gradient(99deg, var(--glass-banner-start), var(--glass-banner-end));
+    box-shadow: var(--glass-shadow);
+}
+
+.ux-design-services .page-header h1 {
+    color: #f1fff8;
+    font-size: clamp(28px, 4.5vw, 48px);
+    line-height: 1.2;
+}
+
+.ux-design-services .page-header .container,
+.ux-design-services .introduce .container,
+.ux-design-services .design-processes > .container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.ux-design-services .introduce.glass-panel {
+    --panel-fill: var(--glass-strong);
+    background: var(--glass-fallback);
+    margin: 24px;
+    padding: 28px 12px;
+}
+
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .ux-design-services .introduce.glass-panel {
+        background: var(--glass-sheen), var(--glass-strong);
+    }
+}
+
+.ux-design-services .design-services {
+    display: none;
+}
+
+:root .ux-design-services .design-processes {
+    padding: 20px 24px;
+    color: var(--glass-text);
+    background: transparent;
+}
+
+.ux-design-services .design-processes p {
+    margin-bottom: 32px;
+}
+
+.ux-design-services .step.glass-panel {
+    padding: 28px;
+    margin-bottom: 24px;
+    gap: 20px;
+}
+
+.ux-design-services .step .image-cointainer {
+    flex: 0 0 100px;
+    padding-right: 0;
+}
+
+.ux-design-services .step .image-cointainer img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.ux-design-services .step .text-container {
+    padding: 0;
+}
+
+.ux-design-services .step h3,
+.ux-design-services .step .text-container p,
+.ux-design-services .design-processes h2 {
+    color: var(--glass-text);
+}
+
+.ux-design-services .step .text-container .number {
+    color: var(--glass-accent);
+    opacity: .17;
+    left: -8px;
+}
+
+.ux-design-services .step .labels .label {
+    background: var(--glass-field);
+    color: var(--glass-muted);
+    border-color: var(--glass-outline);
+    border-radius: 20px;
+    padding: 0 14px;
+    margin: 0 0 8px 8px;
+}
+
+.portfolio-page a:focus-visible,
+.portfolio-page button:focus-visible {
+    outline: 2px solid var(--glass-accent);
+    outline-offset: 3px;
+}
+
+@media (min-width: 992px) {
+    .portfolio-page .timeline > li .posted-date {
+        width: max-content;
+        min-width: 120px;
+        margin-left: 0;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .portfolio-page .timeline > li .posted-date {
+        display: table;
+        width: auto;
+        max-width: calc(100% - 20px);
+        left: 0;
+        margin: 0 0 12px 20px;
+        text-align: left;
+    }
+
+    .portfolio-page .timeline-content {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .portfolio-page .skills-panel,
+    .portfolio-page .clients-panel {
+        width: calc(100% - 30px);
+        padding: 32px 24px;
+    }
+
+    .portfolio-page .navbar-custom .navbar-collapse {
+        border-color: var(--glass-outline);
+    }
+
+    .portfolio-page .navbar-custom .navbar-toggle .icon-bar {
+        background: var(--glass-text);
+    }
+
+    .portfolio-page .skill-title {
+        width: 34%;
+    }
+
+    .portfolio-page .progress {
+        width: 66%;
+    }
+
+    .ux-design-services .step.glass-panel {
+        flex-direction: column;
+    }
+
+    .ux-design-services .step .image-cointainer {
+        flex-basis: auto;
+    }
+
+    .ux-design-services .step .text-container {
+        margin: 0;
+    }
+
+    .ux-design-services .step .labels .label {
+        float: none;
+        margin-left: 0;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --glass-blur: 10px;
+    }
+
+    .portfolio-page .video-intro {
+        --glass-blur: 10px;
+    }
+
+    body.portfolio-page,
+    body.ux-design-services,
+    .portfolio-page #home,
+    .portfolio-page .facts-section,
+    .portfolio-page .hire-section {
+        background-attachment: scroll;
+    }
+
+    .portfolio-page #home.tt-fullHeight {
+        min-height: 740px;
+    }
+
+    .portfolio-page .intro {
+        width: calc(100% - 32px);
+        padding: 28px 20px;
+        border-radius: 24px;
+    }
+
+    .portfolio-page .intro-sub {
+        font-size: 18px;
+    }
+
+    .portfolio-page .navbar-custom .navbar-brand {
+        max-width: calc(100% - 140px);
+    }
+
+    .portfolio-page .intro p {
+        line-height: 1.7;
+    }
+
+    .portfolio-page .section-padding {
+        padding: 64px 0;
+    }
+
+    .portfolio-page .short-info,
+    .portfolio-page .contact-form,
+    .portfolio-page .contact-details {
+        padding: 22px;
+    }
+
+    .portfolio-page .short-info ul.list-check li {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .portfolio-page .contact-form {
+        margin-bottom: 24px;
+    }
+
+    .portfolio-page .count-wrap {
+        padding: 28px 6px 0;
+    }
+
+    .portfolio-page .count-wrap > div {
+        margin-bottom: 28px;
+    }
+
+    .portfolio-page .count-wrap p {
+        font-size: 13px;
+    }
+
+    .portfolio-page .count-wrap i {
+        font-size: 36px;
+        margin-bottom: 18px;
+    }
+
+    .portfolio-page .count-wrap h3 {
+        font-size: 32px;
+    }
+
+    .portfolio-page .customer-logos .slick-slide {
+        margin: 0 10px;
+    }
+
+    .portfolio-page .hire-panel {
+        width: calc(100% - 30px);
+    }
+
+    .portfolio-page .hire-panel h2 {
+        font-size: 26px;
+    }
+
+    .portfolio-page .modal-header h2 {
+        font-size: 20px;
+    }
+
+    .ux-design-services .page-header {
+        margin: 16px 16px 0;
+        padding: 28px 8px;
+    }
+
+    .ux-design-services .introduce.glass-panel {
+        margin: 16px;
+        padding: 22px 6px;
+    }
+
+    .ux-design-services .design-processes {
+        padding: 16px;
+    }
+
+    .ux-design-services .step.glass-panel {
+        padding: 22px;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    :root,
+    :root[data-theme="dark"] {
+        --glass-surface: var(--glass-fallback);
+        --glass-strong: var(--glass-fallback);
+        --glass-nav: var(--glass-fallback);
+        --glass-field: var(--glass-fallback);
+        --glass-sheen: none;
+        --glass-blur: 0px;
+    }
+
+    .portfolio-page .video-intro {
+        --glass-blur: 0px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-page .wow,
+    .portfolio-page .glass-panel.wow,
+    .portfolio-page .timeline-panel.wow,
+    .portfolio-page .scroll-reveal,
+    .portfolio-page .scroll-reveal.is-revealed {
+        animation: none !important;
+        opacity: 1;
+        translate: none;
+        visibility: visible !important;
+    }
+
+    .portfolio-page .portfolio-bg,
+    .portfolio-page .btn,
+    .portfolio-page .timeline-content {
+        transition: none;
+    }
+
+    .portfolio-page .modal-content {
+        animation: none;
+    }
+}

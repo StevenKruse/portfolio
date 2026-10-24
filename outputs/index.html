@@ -1,0 +1,2828 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Steven Kruse | Online Portfolio</title>
+
+    <!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PJ4Q9WT');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94070851-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-94070851-1');
+</script>
+<!-- End Google Analytics -->
+    <style>
+        /* Popup container - can be anything you want */
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            /* The actual popup */
+            .popup .popuptext {
+                visibility: hidden;
+                width: 160px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                margin-left: -80px;
+            }
+
+                /* Popup arrow */
+                .popup .popuptext::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
+                }
+
+            /* Toggle this class - hide and show the popup */
+            .popup .show {
+                visibility: visible;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+            }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+<style>/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 50%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+tooltip {
+  font-size: 32px;
+  font-family: "Helvetica Neue", Sans-Serif;
+  font-stretch: condensed;
+  text-transform: uppercase;
+}
+
+tooltip span {
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  border: 2px solid white;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 7px black;
+}
+</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Steven Kruse :: Digital Online Portfolio">
+    <meta name="keywords" content="Web, Mobile, Responsive, Graphic Design, Steven Kruse, Online Portfolio, CV, vCard">
+	<meta name="author" content="Steven Kruse">
+
+	<title>Steven Kruse :: Digital Online Portfolio</title>
+    <!-- Web Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <!-- Animate css -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- Magnific css -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles CSS -->
+    <link href="assets/css/style.css?v=20261014-map-embed" rel="stylesheet" media="screen">
+    <!-- Responsive CSS -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- infinite-slider.css -->
+    <link href="assets/css/infinite-slider.css" rel="stylesheet">
+    <!-- carousel.css -->
+    <link href="assets/css/carousel.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="assets/images/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/images/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ4Q9WT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+	<!-- Preloader -->
+	<div id="tt-preloader" style="display: none;" aria-hidden="true">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div>
+	<script>
+    // Keep the page accessible even when a plugin or third-party request fails.
+    (function () {
+        var preloader = document.getElementById('tt-preloader');
+        var dismissed = false;
+        var fallback;
+
+        function dismissPreloader() {
+            if (dismissed) return;
+            dismissed = true;
+            window.clearTimeout(fallback);
+            preloader.style.display = 'none';
+        }
+
+        preloader.style.display = 'block';
+        fallback = window.setTimeout(dismissPreloader, 5000);
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', dismissPreloader);
+        } else {
+            dismissPreloader();
+        }
+    }());
+    </script>
+
+	<!-- Home Section -->
+	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+		<div class="intro">
+            <div id="google_translate_element"></div><br>
+            <h1>Steven <span>Kruse</span></h1>
+			<div class="intro-sub">Creative Thinking. Intelligent Design. Innovative Technology.</div>
+			<p>UX/UI Design | Web Development | Mobile Design | Graphic Design | eLearning | AI-Assisted Development<br><b>I am currently looking for Work</b></p>
+
+      <div class="social-icons">
+        <ul class="list-inline">
+          <li><a href="https://www.facebook.com/steven.kruse.7106/"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://x.com/krusemedia"><i class="fa fa-twitter"></i></a></li>
+          <!--<li><a href="#"><i class="fa fa-behance"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>-->
+        </ul>
+      </div> <!-- /.social-icons -->
+		</div>
+
+		<div class="mouse-icon">
+			<div class="wheel"></div>
+		</div>
+	</section><!-- End Home Section -->
+
+
+
+
+	<!-- Navigation -->
+	<header class="header">
+		<nav class="navbar navbar-custom" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="My Online Portfolio"></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#works">Works</a></li>
+						<li><a href="#blog">Clients</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <!--<li><div id="google_translate_element"></div></li>-->
+					</ul>
+				</div>
+			</div><!-- .container -->
+		</nav>
+	</header><!-- End Navigation -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">About Me</h2>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-push-8">
+            <div class="biography">
+              <div class="myphoto">
+               <img src="assets/images/myphoto.png" alt="Steven Kruse">
+              </div>
+              <ul>
+                <li><strong>Name:</strong> Steven Kruse</li>
+                <li><strong>Date of birth:</strong> Aug, 1st 1983</li>
+                <li><strong>Address:</strong> Rockwood, MI</li>
+                <li><strong>Nationality:</strong> USA</li>
+                <li><strong>Phone:</strong> (734) 747-4128</li>
+                <li><strong>Email:</strong> myself@stevenkruse.com</li>
+              </ul>
+
+            </div>
+          </div> <!-- col-md-4 -->
+
+          <div class="col-md-8 col-md-pull-4">
+            <div class="short-info wow fadeInUp">
+              <h3>About Me</h3>
+              <p><b>Where Creativity Meets Technology</b><br><br>With over 25 years of experience in Web and Graphic Design and more than 10 years specializing in UX/UI Design, I've built my career around transforming ideas into intuitive, engaging, and visually compelling digital experiences.<br>My expertise encompasses User Experience (UX) Design, User Interface (UI) Design, Responsive Web Design, Mobile Application Interfaces, Graphic Design, Usability Testing, and Front-End Development. I combine creative thinking with technical knowledge to develop solutions that balance visual appeal, functionality, accessibility, and user needs.<br>I believe great design goes beyond aesthetics. It's about understanding how people think, how they interact with technology, and how thoughtful design can simplify complex challenges. Every project is an opportunity to solve problems, improve usability, and create meaningful connections between people and digital products.<br>As a forward-thinking designer and technology enthusiast, I'm constantly exploring emerging tools, modern development frameworks, and AI-assisted development techniques to enhance creativity, streamline workflows, and bring innovative ideas to life.<br>I'm a natural problem-solver who values collaboration, continuous learning, attention to detail, and taking pride in every aspect of my work. Whether I'm collaborating with a development team, contributing to an organization's digital strategy, or working directly with a client, my goal remains the same: deliver exceptional digital experiences that make a lasting impact.<br>I'm always interested in connecting with innovative companies, creative teams, and individuals who share a passion for technology, thoughtful design, and pushing creative boundaries.<br>Let's turn great ideas into exceptional experiences.</p>
+            </div>
+
+            <div class="short-info wow fadeInUp">
+              <h3>What I do</h3>
+              <p>I bring creativity, technical expertise, and strategic thinking to every project.  Throughout my career, I've collaborated with established companies, creative teams, and businesses of all sizes, developing custom digital experiences that combine compelling visuals with intuitive functionality.  My expertise extends from designing responsive websites and mobile interfaces to developing interactive prototypes, creating visual identities, and producing engaging digital content. With a strong foundation in HTML5, CSS3, responsive design, and user-centered design principles, I understand how to bridge the gap between creative concepts and functional digital solutions.  I'm passionate about exploring emerging technologies, including AI-assisted development and modern design workflows, to streamline the creative process, solve complex challenges, and bring innovative ideas to life.  Whether I'm creating a seamless user experience, designing a distinctive brand identity, or collaborating on a complex digital project, my focus is always on delivering thoughtful, effective, and visually engaging solutions.</p>
+
+              <ul class="list-check">
+                <li>User Experience (UX) Design</li>
+                <li>User Interface (UI) Design</li>
+                <li>Web Design & Front-End Development</li>
+                <li>Mobile Interface Design</li>
+                <li>Responsive Web Design</li>
+                <li>Graphic Design & Visual Communication</li>
+                <li>Concept Development & Prototyping</li>
+                <li>Content Development & Authoring</li>
+                <li>eLearning & Instructional Design</li>
+                <li>Project Management & Collaboration</li>
+                <li>AI-Assisted Creative Development</li>
+              </ul>
+            </div>
+
+            <div class="my-signature">
+              <img src="assets/images/sign.png" alt="Steven Kruse">
+            </div>
+
+            <div class="download-button">
+              <a class="btn btn-info btn-lg ux-process-link" href="ux-process/ux-process.html" aria-haspopup="dialog">my ux process</a>
+              <div class="btn btn-primary btn-lg" id="myBtn">download my cv</div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Download My Resume / CV...</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p><b>I've Provided both PDF and DOCX Formats</b></p>
+                            <p><center><a href="assets/resume/Resume-Steven_Kruse-7.5.2018.pdf" target="_blank">
+                            <img src="assets/images/icon-pdf.png" alt="PDF Format" style="width:72px;height:72px;border:0;">
+                            </a>
+                                   <a href="assets/resume/Resume-Steven_Kruse-7.5.2018.docx" target="_blank">
+                                   <img src="assets/images/icon-docx.png" alt="Word Format" style="width:72px;height:72px;border:0;">
+                                   </a>
+                            </center></p>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>Last Updated: October 14th, 2026</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+      </div> <!-- /.container -->
+    </section><!-- End About Section -->
+
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+      <div class="tf-bg-overlay">
+
+        <div class="container">
+
+          <div class="video-intro">
+             <a class="popup-video" href="#"> <i class="fa fa-play"></i>  </a>
+             <h2>Video Introduction</h2>
+          </div>
+
+        </div>
+
+        <!--/.container-->
+      </div>
+      <!--/.overlay-->
+    </section>
+    <!-- /.Video Section -->
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section section-padding">
+        <div class="container">
+            <h2 class="section-title wow fadeInUp">Resume</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">2008 - 2012</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Bachelor of Arts Degree</h3>
+                                            <span>Art Institute of California - San Bernardino, CA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Successfully Completed the Graphic Design and Media Arts Program with a B.A. My Primary Focus was Graphic Design, User Interface Design, User Experience Design, and Front-End Design.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                  <span class="month">7/2017 – Present</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>UI/UX Designer / Web Content Author</h3>
+                                            <span>Flagstar Bank - Troy, MI</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Web Content Authoring in AEM, Lead UX Designer for Flagstar Bank's merger with Desert Community Bank, Usability Testing for the DCB Website across all End-User Hardware and Designing the DCB App...</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">7/2015 – 5/2017</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Sr. UX Designer / E-Learning Developer</h3>
+                                            <span>Ford Motor Company / BOSCH - Allen Park, MI</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Sr. UX Designer for Mobile based Apps and Websites.  Created Responsive Websites from Pre-existing Non-Responsive Websites.  Head of eLearning Course Development and Mobile App Design...</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">5/2013 – 7/2015</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Web and Graphic Designer</h3>
+                                            <span>Self-Employed / Freelance Developer</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Worked with Businesses both Big and Small.  Designed Responsive and WordPress Websites for Clients which included Mobile Web Pages, User Interface Design and Search Engine Optimization (SEO)...</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">1/2012 – 5/2013</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Creative Media Director</h3>
+                                            <span>United Manufacturers Staffing - Rancho Cucamonga, CA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Created the Online Identity for UMS and Designed a Flash Based Website.  Responsible for Designing Logos, Email Campaigns, Newsletters, Business Cards and Search Engine Optimaztion (SEO)...</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">8/2010 – 1/2012</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Lead Designer / Marketing Director</h3>
+                                            <span>Persona Enterprises - Rancho Cucamonga, CA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Designed Numerous Websites for each Division of Persona.  Designed all Marketing Related Material, Business Cards, Flyers, Advertising and Designed the 2nd Edition of a Magazine called "GotSpots"...</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">5/2008 – 8/2010</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>UI Designer / Graphic Designer</h3>
+                                            <span>Pixel Touch - Ontario, CA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Designed the Website including all Graphical Content.  Helped Design Touchscreen User Interfaces and Created Digital Signage Advertising...</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div><!-- /.container -->
+    </section><!-- End Resume Section -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Skills</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h5>UX Design</h5></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+
+            <div class="skill-progress">
+              <div class="skill-title"><h5>UI Design</h5></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h5>Front-End</h5></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+              <div class="skill-progress">
+                  <div class="skill-title"><h5>Responsive</h5></div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
+                          <span>80%</span>
+                      </div>
+                  </div><!-- /.progress -->
+              </div><!-- /.skill-progress -->
+              <div class="skill-progress">
+                  <div class="skill-title"><h5>Concept Design</h5></div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">
+                          <span>80%</span>
+                      </div>
+                  </div><!-- /.progress -->
+              </div><!-- /.skill-progress -->
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h5>Graphic Design</h5></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h5>Web Design</h5></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h5>eLearning Design</h5></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+              <div class="skill-progress">
+                  <div class="skill-title"><h5>Usability Testing</h5></div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                          <span>80%</span>
+                      </div>
+                  </div><!-- /.progress -->
+              </div><!-- /.skill-progress -->
+              <div class="skill-progress">
+                  <div class="skill-title"><h5>SEO</h5></div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                          <span>80%</span>
+                      </div>
+                  </div><!-- /.progress -->
+              </div><!-- /.skill-progress -->
+          </div><!-- /.col-md-6 -->
+        </div><!-- /.row -->
+
+        <div class="skill-chart text-center">
+          <h3>More skills</h3>
+        </div>
+          
+        <div class="row more-skill text-center">
+          <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="91" data-color="e74c3c">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Leadership</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="94" data-color="2ecc71">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Creativity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="87" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="84" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Branding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="92" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Marketing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="99" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Motivation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div><!-- /.container -->
+    </section><!-- End Skills Section -->
+
+
+    <!-- Works Section -->
+    <section id="works" class="works-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">My Work</h2>
+
+        <ul class="list-inline" id="filter">
+            <li><a class="active" data-group="all">All</a></li>
+            <li><a data-group="design">Design</a></li>
+            <li><a data-group="web">Web</a></li>
+            <li><a data-group="print">Print</a></li>
+            <li><a data-group="concepts">Concepts</a></li>
+        </ul>
+
+        <div class="row">
+          <div id="grid">
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/magnetic-boxes-mockup.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/magnetic-boxes-mockup.png" alt="Magnetic Boxes Mockup">
+                          <div class="portfolio-info">
+                              <h3>Magnetic Boxes Mockup</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/shelfbox-02.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/shelfbox-02.png" alt="Shelf Box w/o Cover">
+                          <div class="portfolio-info">
+                              <h3>Shelf Box w/o Cover</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/shelfbox-01.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/shelfbox-01.png" alt="Shelf Box with Cover">
+                          <div class="portfolio-info">
+                              <h3>Shelf Box with Cover</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/dashboard-ui/components-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <a href="assets/images/works/concepts/dashboard-ui/components-ext.png" title="Full Size Image" target="_blank"><i class="fa fa-link"></i></a>
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/dashboard-ui/components.png" alt="Dashboard UI Concept - Components">
+                          <div class="portfolio-info">
+                              <h3>Dashboard UI Concept #1</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/dashboard-ui/style-guide-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <a href="assets/images/works/concepts/dashboard-ui/style-guide-ext.png" title="Full Size Image" target="_blank"><i class="fa fa-link"></i></a>
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/dashboard-ui/style-guide.png" alt="Dashboard UI Concept - Style Guide">
+                          <div class="portfolio-info">
+                              <h3>Dashboard UI Concept #2</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/dashboard-ui/forms-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <a href="assets/images/works/concepts/dashboard-ui/forms-ext.png" title="Full Size Image" target="_blank"><i class="fa fa-link"></i></a>
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/dashboard-ui/forms.png" alt="Dashboard UI Concept - Forms">
+                          <div class="portfolio-info">
+                              <h3>Dashboard UI Concept #3</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/dashboard-ui/navigation-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <a href="assets/images/works/concepts/dashboard-ui/navigation-ext.png" title="Full Size Image" target="_blank"><i class="fa fa-link"></i></a>
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/dashboard-ui/navigation.png" alt="Dashboard UI Concept - Navigation">
+                          <div class="portfolio-info">
+                              <h3>Dashboard UI Concept #4</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-login-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-login.png" alt="iPhone UI Concept - Login">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #1</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-load_screen-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-load_screen.png" alt="iPhone UI Concept - Loading">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #2</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-dashboard-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-dashboard.png" alt="iPhone UI Concept - Dashboard">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #3</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-activity-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-activity.png" alt="iPhone UI Concept - Activity">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #4</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-main_table-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-main_table.png" alt="iPhone UI Concept - Main Table">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #5</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-gallery-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-gallery.png" alt="iPhone UI Concept - Gallery">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #6</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/iphone-ui/iphone-ui-messages-zoom.png"> class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/iphone-ui/iphone-ui-messages.png" alt="iPhone UI Concept - Messages">
+                          <div class="portfolio-info">
+                              <h3>iPhone UI Concept #7</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/ebook-app/login-screen-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/ebook-app/login-screen.png" alt="eBook App Concept - Login Screen">
+                          <div class="portfolio-info">
+                              <h3>eBook App Concept #1</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/ebook-app/loading-screen-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/ebook-app/loading-screen.png" alt="eBook App Concept - Loading Screen">
+                          <div class="portfolio-info">
+                              <h3>eBook App Concept #2</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/ebook-app/groups-screen-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/ebook-app/groups-screen.png" alt="eBook App Concept - Genre Screen">
+                          <div class="portfolio-info">
+                              <h3>eBook App Concept #3</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/ebook-app/search-screen-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/ebook-app/search-screen.png" alt="eBook App Concept - Search Screen">
+                          <div class="portfolio-info">
+                              <h3>eBook App Concept #4</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/ebook-app/side-menu-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/ebook-app/side-menu.png" alt="eBook App Concept - Side Menu">
+                          <div class="portfolio-info">
+                              <h3>eBook App Concept #5</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/flat-ui-dl-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/flat-ui-dl.png" alt="Flat UI Concept">
+                          <div class="portfolio-info">
+                              <h3>Flat UI Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/cryptocurrency-app-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/cryptocurrency-app.png" alt="Cryptocurrency App">
+                          <div class="portfolio-info">
+                              <h3>Cryptocurrency App</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/ford-10R80-course-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/ford-10R80-course.png" alt="Ford 10R80 Course">
+                          <div class="portfolio-info">
+                              <h3>Ford 10R80 Course</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/ford-powerpoint-template-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/ford-powerpoint-template.png" alt="Ford Course Template">
+                          <div class="portfolio-info">
+                              <h3>Ford Course Template</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/baby-food-labels.png" title="Baby Food Labels"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/baby-food-labels.png" alt="Organic Baby Food Labels">
+                          <div class="portfolio-info">
+                              <h3>Organic Baby Food Labels</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/Glass-Trophy-Mockup.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/Glass-Trophy-Mockup.png" alt="Glass Trophy Mockup">
+                          <div class="portfolio-info">
+                              <h3>Glass Trophy Mockup</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/sportbike-sections-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/sportbike-sections.png" alt="Motorcycle Sections">
+                          <div class="portfolio-info">
+                              <h3>Motorcycle Sections</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/3d-sportbike-finished.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/3d-sportbike-finished.png" alt="3D Sportbike Finished">
+                          <div class="portfolio-info">
+                              <h3>3D Sportbike Completed</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/other/3d-sportbike-wireframe.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/other/3d-sportbike-wireframe.png" alt="3D Sportbike Wireframe">
+                          <div class="portfolio-info">
+                              <h3>3D Sportbike Wirefrane</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/google-ui/google-ui.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/google-ui/google-ui.png" alt="Google UI Concept">
+                          <div class="portfolio-info">
+                              <h3>Google UI Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/tablet-dashboard/tablet-dashboard-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/tablet-dashboard/tablet-dashboard.png" alt="Tablet Dashboard Concept">
+                          <div class="portfolio-info">
+                              <h3>Tablet Dashboard Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/tablet-dashboard/tablet-login-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/tablet-dashboard/tablet-login.png" alt="Tablet Login Concept">
+                          <div class="portfolio-info">
+                              <h3>Tablet Login Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-10.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-10.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-09-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-09.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-08.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-08.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-07.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-07.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-06.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-06.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-05.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-05.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-04.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-04.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-03.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-03.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-02.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-02.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/sketches/mobile-ux-sketch-01.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/sketches/mobile-ux-sketch-01.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/mobile-wireframe-01-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/mobile-wireframe-01.png" alt="Mobile Wireframe Sketch">
+                          <div class="portfolio-info">
+                              <h3>Mobile Wireframe Sketch</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/hybrid-concept.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/hybrid-concept.png" alt="Hybrid App Concept">
+                          <div class="portfolio-info">
+                              <h3>Hybrid App Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/login-concept.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/login-concept.png" alt="Mobile Login Screen Concept">
+                          <div class="portfolio-info">
+                              <h3>Login Screen Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/mobile-store-concept-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/mobile-store-concept.png" alt="Mobile Store Concept">
+                          <div class="portfolio-info">
+                              <h3>Mobile Store Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/mobile-ux-design.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/mobile-ux-design.png" alt="Mobile UX Design">
+                          <div class="portfolio-info">
+                              <h3>Mobile UX Design</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/tasks-app-concept-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/tasks-app-concept.png" alt="Tasks Concept Mobile App">
+                          <div class="portfolio-info">
+                              <h3>Tasks Concept App</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/mobile-electricity-concept-app-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/mobile-electricity-concept-app.png" alt="Electricity Usage Concept App">
+                          <div class="portfolio-info">
+                              <h3>Electricity Usage App</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "concepts"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/concepts/ux-ui-mobile-concept-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/concepts/ux-ui-mobile-concept.png" alt="UX - UI Concept">
+                          <div class="portfolio-info">
+                              <h3>UX - UI Concept</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+             
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/dcbk-support-en-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/dcbk-support-en.png" alt="Desert Community Bank - English">
+                          <div class="portfolio-info">
+                              <h3>DCB - English</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/dcbk-support-es-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/dcbk-support-es.png" alt="Desert Community Bank - Spanish">
+                          <div class="portfolio-info">
+                              <h3>DCB - Spanish</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/flagstar-home-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/flagstar-home.png" alt="Flagstar Bank Homepage">
+                          <div class="portfolio-info">
+                              <h3>Flagstar Homepage</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/flagstar-calculators-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/flagstar-calculators.png" alt="Flagstar Bank Calculators">
+                          <div class="portfolio-info">
+                              <h3>Flagstar Calculators</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/flagstar-sii-01-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/flagstar-sii-01.png" alt="Flagstar Bank SII Pg.1">
+                          <div class="portfolio-info">
+                              <h3>Flagstar Bank SII Pg.1</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/flagstar-sii-02-zoom.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/flagstar-sii-02.png" alt="Flagstar Bank SII Pg.2">
+                          <div class="portfolio-info">
+                              <h3>Flagstar Bank SII Pg.2</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/734comfort.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/734comfort.png" alt="734comfort"> 
+                  <div class="portfolio-info">
+                    <h3>734 Comfort HVAC</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/old-flash-portfolio.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/old-flash-portfolio.png" alt="My Old Flash Portfolio">
+                          <div class="portfolio-info">
+                              <h3>My Flash Portfolio</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/chief-apparel.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/chief-apparel.png" alt="Chief Apparel">
+                          <div class="portfolio-info">
+                              <h3>Chief Apparel</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-companyrocket.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-companyrocket.png" alt="CompanyRocket">
+                          <div class="portfolio-info">
+                              <h3>CompanyRocket</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-gotspots.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-gotspots.png" alt="GotSpots!">
+                          <div class="portfolio-info">
+                              <h3>GotSpots!</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-hipnotikstar.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-hipnotikstar.png" alt="Hipnotik Star Music Studio">
+                          <div class="portfolio-info">
+                              <h3>Hipnotik Star</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-mm.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-mm.png" alt="Maintenance Mechanic">
+                          <div class="portfolio-info">
+                              <h3>Maintenance Mechanic</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-pdl-bistro.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-pdl-bistro.png" alt="Ponce de Leon Bistro">
+                          <div class="portfolio-info">
+                              <h3>Ponce de Leon Bistro</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-personahr.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-personahr.png" alt="PersonaHR">
+                          <div class="portfolio-info">
+                              <h3>Persona|HR</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-personahr2.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-personahr2.png" alt="PersonaHR 2.0">
+                          <div class="portfolio-info">
+                              <h3>Persona|HR 2.0</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+
+
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-personamnt.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-personamnt.png" alt="PersonaMaintenance"> 
+                  <div class="portfolio-info">
+                    <h3>PersonaMaintenance</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-pixeltouch.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-pixeltouch.png" alt="Pixel Touch"> 
+                  <div class="portfolio-info">
+                    <h3>Pixel Touch</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-stressopedic.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-stressopedic.png" alt="Stress O Pedic"> 
+                  <div class="portfolio-info">
+                    <h3>Stress O Pedic</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-teknica.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-teknica.png" alt="TeknicaITG"> 
+                  <div class="portfolio-info">
+                    <h3>Teknica|ITG</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-ums.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-ums.png" alt="United Manufacturers Staffing"> 
+                  <div class="portfolio-info">
+                    <h3>UM-Staffing Agency</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-wealthwisdom.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-wealthwisdom.png" alt="Wealth and Wisdom"> 
+                  <div class="portfolio-info">
+                    <h3>Wealth and Wisdom</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/websites/web-whatspotsaw.png"><i class="fa fa-search-plus"></i></a>
+                    <!-- <a href="#"><i class="fa fa-link"></i></a> -->                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/websites/web-whatspotsaw.png" alt="What Spot Saw"> 
+                  <div class="portfolio-info">
+                    <h3>What Spot Saw</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-rv-mm.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-rv-mm.png" alt="Maintenance Mechanic Touchscreen UI">
+                          <div class="portfolio-info">
+                              <h3>MM Touchscreen UI</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-rv-phr.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-rv-phr.png" alt="PersonaHR Touchscreen UI">
+                          <div class="portfolio-info">
+                              <h3>PersonaHR Touchscreen UI</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-rv-pm.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-rv-pm.png" alt="PersonaMaintenance Touchscreen UI">
+                          <div class="portfolio-info">
+                              <h3>PM Touchscreen UI</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web", design]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/websites/web-rv-tek.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/websites/web-rv-tek.png" alt="TeknicaITG Touchscreen UI">
+                          <div class="portfolio-info">
+                              <h3>TeknicaITG Touchscreen UI</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/chromagine.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/chromagine.png" alt="Chromagine">
+                          <div class="portfolio-info">
+                              <h3>Chromagine Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/coca-cola.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/coca-cola.png" alt="Coca-Cola">
+                          <div class="portfolio-info">
+                              <h3>Coca-Cola Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/cosmetic.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/cosmetic.png" alt="Cosmetics">
+                          <div class="portfolio-info">
+                              <h3>Cosmetics Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/persona-hr.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/persona-hr.png" alt="PersonaHR">
+                          <div class="portfolio-info">
+                              <h3>PersonaHR Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/persona-maintenance.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/persona-maintenance.png" alt="Persona Maintenance">
+                          <div class="portfolio-info">
+                              <h3>Persona Maintenance Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/porters.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/porters.png" alt="Porters">
+                          <div class="portfolio-info">
+                              <h3>Porters Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/advertising/teknica-itg.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/advertising/teknica-itg.png" alt="TeknicaITG">
+                          <div class="portfolio-info">
+                              <h3>TeknicaITG Ad</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/wallpapers/um-staffing.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/wallpapers/um-staffing.png" alt="UMS Wallpaper for Workstations">
+                          <div class="portfolio-info">
+                              <h3>UMS Wallpaper</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/flyers/crepes_de_paris-horizontal-flyer.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/flyers/crepes_de_paris-horizontal-flyer.png" alt="Crepes de Paris (Horz)">
+                          <div class="portfolio-info">
+                              <h3>Crepes de Paris (Horz)</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/flyers/crepes_de_paris-vertical-flyer.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/flyers/crepes_de_paris-vertical-flyer.png" alt="Crepes de Paris (Vert)">
+                          <div class="portfolio-info">
+                              <h3>Crepes de Paris (Vert)</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/flyers/um-staffing-promo.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/flyers/um-staffing-promo.png" alt="UMS Promotions">
+                          <div class="portfolio-info">
+                              <h3>UMS Promotions</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/logos/um-staffing-00.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/logos/um-staffing-00.png" alt="UMS Gears Logo">
+                          <div class="portfolio-info">
+                              <h3>UMS Gears Logo</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/logos/um-staffing-01.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/logos/um-staffing-01.png" alt="UMS Logo">
+                          <div class="portfolio-info">
+                              <h3>UMS Logo</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/logos/um-labeling-00.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/logos/um-labeling-00.png" alt="UM Labeling Logo">
+                          <div class="portfolio-info">
+                              <h3>UM Labeling Logo</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/logos/um-labeling-01.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/logos/um-labeling-01.png" alt="UM Labeling">
+                          <div class="portfolio-info">
+                              <h3>UM Labeling</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/logos/sk-orb-02.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/logos/sk-orb-02.png" alt="SK Logo Orb">
+                          <div class="portfolio-info">
+                              <h3>SK Logo Orb</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/brochures/company-rocket.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/brochures/company-rocket.png" alt="CompanyRocket Brochure">
+                          <div class="portfolio-info">
+                              <h3>CompanyRocket Brochure</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/brochures/maintenance-mechanic.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/brochures/maintenance-mechanic.png" alt="MaintenanceMechanic Brochure">
+                          <div class="portfolio-info">
+                              <h3>MaintenanceMechanic Brochure</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/brochures/persona-hr.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/brochures/persona-hr.png" alt="PersonaHR Brochure">
+                          <div class="portfolio-info">
+                              <h3>PersonaHR Brochure</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/brochures/persona-it.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/brochures/persona-it.png" alt="PersonaIT Brochure">
+                          <div class="portfolio-info">
+                              <h3>PersonaIT Brochure</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/brochures/persona-maintenance.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/brochures/persona-maintenance.png" alt="PersonaMaintenance Brochure">
+                          <div class="portfolio-info">
+                              <h3>PersonaMaintenance Brochure</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/brochures/teknica-itg.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/brochures/teknica-itg.png" alt="TeknicaITG Brochure">
+                          <div class="portfolio-info">
+                              <h3>TeknicaITG Brochure</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/chief-apparel.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/chief-apparel.png" alt="Chief Apparel Business Card">
+                          <div class="portfolio-info">
+                              <h3>Chief Apparel Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/company-rocket.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/company-rocket.png" alt="CompanyRocket Business Card">
+                          <div class="portfolio-info">
+                              <h3>CompanyRocket Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/maintenance-mechanic.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/maintenance-mechanic.png" alt="Maintenance Mechanic Business Card">
+                          <div class="portfolio-info">
+                              <h3>Maintenance Mechanic Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/persona-hr.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/persona-hr.png" alt="PersonaHR Business Card">
+                          <div class="portfolio-info">
+                              <h3>PersonaHR Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/persona-hr-00.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/persona-hr-00.png" alt="PersonaHR Custom Business Card">
+                          <div class="portfolio-info">
+                              <h3>PersonaHR Custom Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/persona-maintenance.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/persona-maintenance.png" alt="PersonaMaintenance Business Card">
+                          <div class="portfolio-info">
+                              <h3>PersonaMaintenance Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/teknica-itg.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/teknica-itg.png" alt="TeknicaITG Business Card">
+                          <div class="portfolio-info">
+                              <h3>TeknicaITG Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/business-cards/um-staffing.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/business-cards/um-staffing.png" alt="UMS Business Card">
+                          <div class="portfolio-info">
+                              <h3>UMS Business Card</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-01-02.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-01-02.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-03-04.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-03-04.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-05-06.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-05-06.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-07-08.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-07-08.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-09-10.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-09-10.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-11-12.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-11-12.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-13-14.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-13-14.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-15-16.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-15-16.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-17-18.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-17-18.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-19-20.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-19-20.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-21-22.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-21-22.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-23-24.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-23-24.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-25-26.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-25-26.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+              <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design", "print"]'>
+                  <div class="portfolio-bg">
+                      <div class="portfolio">
+                          <div class="tt-overlay"></div>
+                          <div class="links">
+                              <a class="image-link" href="assets/images/works/gotspots-magazine/page-27.png"><i class="fa fa-search-plus"></i></a>
+                              <!-- <a href="#"><i class="fa fa-link"></i></a> -->
+                          </div><!-- /.links -->
+                          <img src="assets/images/works/gotspots-magazine/page-27.png" alt="GotSpots! Magazine: 2nd Issue">
+                          <div class="portfolio-info">
+                              <h3>GotSpots! Magazine: 2nd Issue</h3>
+                          </div><!-- /.portfolio-info -->
+                      </div><!-- /.portfolio -->
+                  </div><!-- /.portfolio-bg -->
+              </div><!-- /.portfolio-item -->
+          </div><!-- /#grid -->
+        </div><!-- /.row -->
+        <div class="works-more text-center">
+          <a href="portfolio/" class="btn btn-primary btn-lg">View More</a>
+        </div>
+      </div><!-- /.container -->
+    </section><!-- End Works Section -->
+
+
+    <!-- Facts Section -->
+    <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="tt-overlay-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="count-wrap">
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-flask"></i>
+                  <h3 class="timer">25</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div class="col-sm-3 col-xs-6"> 
+                  <i class="fa fa-thumbs-up"></i>
+                  <h3 class="timer">382</h3>                
+                  <p>Projects Done</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-users"></i>
+                  <h3 class="timer">226</h3> 
+                  <p>Happy Clients</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-trophy"></i>
+                  <h3 class="timer">8</h3> 
+                  <p>Awards Won</p>
+                </div>
+              </div><!-- /count-wrap -->
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div>
+    </section> <!-- End Facts Section -->
+    <!-- Client Section -->
+    <section id="blog" class="latest-blog-section section-padding">
+        <div class="container">
+            <h2 class="section-title wow fadeInUp">Clients</h2>
+        <p><center><h5 class="fadeIn">Here are just a few of the companies I've worked with:</h5></center></p>
+        <br>
+            <div class="row">
+                <section class="customer-logos slider">
+                    <div class="slide"><img src="assets/images/clients/client-01.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-02.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-03.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-04.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-05.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-06.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-07.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-08.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-09.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-10.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-11.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-12.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-13.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-14.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-15.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-16.png"></div>
+                    <div class="slide"><img src="assets/images/clients/client-17.png"></div>
+                </section>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- End Client Section -->
+
+    <!-- Hire Section -->
+    <section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="hire-section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>I'm available for teaching</h2>
+              <a href="#" class="btn btn-default">Learn More</a>
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.hire-section-bg -->
+    </section><!-- End Hire Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Get in touch</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-form">
+              <strong>Send me a message</strong>
+              <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
+
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" class="form-control" id="subject">
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
+                </div>
+
+                <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div><!-- /.contact-form -->
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="row center-xs">
+              <div class="col-sm-6">
+                <i class="fa fa-map-marker"></i>
+                <address>
+                  <strong>Location</strong>
+                  South East Michigan<br>
+                  Rockwood, MI<br>
+                </address>
+              </div>
+
+              <div class="col-sm-6">
+                <i class="fa fa-mobile"></i>
+                <div class="contact-number">
+                  <strong>Phone Number</strong>
+                  (734) 747-4128<br>
+                  myself@stevenkruse.com
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="location-map">
+                <iframe
+                  class="map-canvas"
+                  title="Map of Rockwood, Michigan"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23693.66452731285!2d-83.24659572540124!3d42.070876488483364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3f843a799735%3A0x6985576c073232e6!2sRockwood%2C%20MI%2048173!5e0!3m2!1sen!2sus!4v1792014678753!5m2!1sen!2sus"
+                  width="600"
+                  height="350"
+                  allowfullscreen
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- End Contact Section -->
+
+
+	<!-- Footer Section -->
+    <footer class="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright text-center">
+              <p>&copy; StevenKruse.com - 2026. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!-- End Footer Section -->
+
+
+	<!-- Scroll-up -->
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+
+	<!-- Javascript files -->
+    <script>// Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }</script>
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+    </script>
+    <script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+    </script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/tooltips.js"></script>
+  <script>
+    jQuery(function ($) {
+      $('a[title]').tooltips();
+    });
+  </script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/jquery.sticky.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.countTo.js"></script>
+  <script src="assets/js/jquery.inview.min.js"></script> 
+  <script src="assets/js/jquery.easypiechart.js"></script>
+  <script src="assets/js/jquery.shuffle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="assets/js/scripts.js?v=20261014-map-embed"></script>
+  <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
+</body>
+</html>

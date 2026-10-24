@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f8faf9">
+  <title>Bad request | Steven Kruse</title>
+  <!-- Keep hosted error URLs and direct local previews working. -->
+  <base href="/">
+  <script>
+    if (window.location.protocol === 'file:') {
+      document.querySelector('base').href = new URL('./', window.location.href).href;
+    }
+  </script>
+  <link rel="icon" href="assets/images/ico/favicon.png" type="image/png">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #233830;
+      --muted: #60716b;
+      --green: #27785c;
+      --mint: #68c3a3;
+      --line: #dce5e0;
+      --paper: #f8faf9;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      min-width: 280px;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 3px solid #237ca1; outline-offset: 6px; }
+    .wrap { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
+
+    .site-header {
+      min-height: 112px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand { display: inline-flex; padding-block: 12px; }
+    .brand img { display: block; width: 264px; max-width: 100%; height: auto; }
+    .site-nav { display: flex; gap: 32px; font-size: 14px; font-weight: 600; }
+    .site-nav a { padding-block: 12px; }
+    .site-nav a:hover, .text-link:hover { color: var(--green); }
+
+    .error-layout {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      align-items: center;
+      gap: 48px;
+      padding-block: 76px 88px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 28px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before { content: ""; width: 7px; height: 7px; background: var(--mint); }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 5.2vw, 68px);
+      font-weight: 650;
+      line-height: 1.1;
+      letter-spacing: -3px;
+    }
+
+    h1 span { display: block; margin-bottom: 8px; color: var(--green); }
+    .description { max-width: 380px; margin: 26px 0 0; color: var(--muted); font-size: 17px; line-height: 1.8; }
+    .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 26px; margin-top: 34px; }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      min-height: 52px;
+      padding: 15px 23px;
+      border: 1px solid var(--green);
+      border-radius: 3px;
+      background: var(--green);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 160ms ease, border-color 160ms ease;
+    }
+
+    .home-link:hover { background: #1c5d46; border-color: #1c5d46; }
+    .home-link svg, .text-link svg { width: 18px; height: 18px; flex: none; }
+    .text-link { display: inline-flex; align-items: center; gap: 9px; min-height: 48px; font-size: 14px; font-weight: 600; }
+
+    .error-art {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      max-width: 490px;
+      aspect-ratio: 1 / 1;
+      justify-self: end;
+      display: grid;
+      place-items: center;
+    }
+
+    .art-grid {
+      position: absolute;
+      z-index: -2;
+      inset: 16% 0 1% 5%;
+      background-image: radial-gradient(#a9c3b7 1px, transparent 1px);
+      background-size: 19px 19px;
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 72%);
+      mask-image: radial-gradient(ellipse at center, #000 25%, transparent 72%);
+    }
+
+    .art-circle {
+      position: absolute;
+      z-index: -1;
+      inset: 15% 9% 6%;
+      border-radius: 50%;
+      background: #e1f0e9;
+    }
+
+    .art-circle::after { content: ""; position: absolute; inset: -17px; border: 1px solid #cbded3; border-radius: 50%; }
+    .error-number { position: absolute; top: 3%; left: 0; width: 100%; color: #b5dac7; text-align: center; font-size: clamp(180px, 18.5vw, 250px); font-weight: 800; line-height: 1; letter-spacing: -14px; }
+    .avatar { position: relative; width: 78%; height: auto; margin-top: 10%; }
+
+    .art-caption {
+      position: absolute;
+      right: 4%;
+      bottom: 2%;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--muted);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 11px;
+      letter-spacing: .5px;
+      transform: rotate(-4deg);
+    }
+
+    .art-caption::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); }
+    .spark { position: absolute; color: var(--green); font-size: 30px; font-weight: 300; line-height: 1; }
+    .spark-one { top: 22%; right: 4%; transform: rotate(15deg); }
+    .spark-two { bottom: 13%; left: 7%; font-size: 21px; transform: rotate(-12deg); }
+
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 84px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .site-footer p { margin: 0; }
+    .footer-note { color: var(--green); }
+
+    @media (min-width: 1600px) { .error-layout { flex: 0 1 auto; margin-block: auto; } }
+
+    @media (max-width: 900px) {
+      .wrap { width: calc(100% - 64px); }
+      .error-layout { gap: 24px; }
+      h1 { font-size: 48px; letter-spacing: -2px; }
+      .error-number { font-size: 180px; }
+      .actions { gap: 18px; }
+    }
+
+    @media (max-width: 780px) {
+      .wrap { width: calc(100% - 40px); }
+      .site-header { min-height: 88px; gap: 16px; }
+      .brand { max-width: 210px; }
+      .site-nav { gap: 18px; font-size: 12px; }
+      .site-nav .portfolio-nav { display: none; }
+      .error-layout { grid-template-columns: 1fr; gap: 30px; padding-block: 42px 46px; }
+      .error-copy { max-width: 480px; }
+      .eyebrow { margin-bottom: 21px; font-size: 10px; }
+      h1 { font-size: clamp(40px, 8.6vw, 56px); }
+      .description { margin-top: 20px; font-size: 16px; line-height: 1.7; }
+      .actions { margin-top: 24px; gap: 22px; }
+      .error-art { width: min(100%, 340px); justify-self: center; }
+      .error-number { font-size: 180px; }
+      .site-footer { min-height: 92px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 5px; padding-block: 18px; }
+    }
+
+    @media (max-width: 340px) {
+      .brand { max-width: 178px; }
+      .site-nav { font-size: 11px; }
+      .error-number { font-size: 150px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { .home-link { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Steven Kruse — home">
+      <img src="assets/images/logo.png" alt="Designs by Steven Kruse" width="264" height="24">
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="portfolio-nav" href="index.html#works">Portfolio</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="error-layout wrap">
+    <div class="error-copy">
+      <p class="eyebrow">Error 400 / Bad request</p>
+      <h1><span>Oops...</span>We have an issue.</h1>
+      <p class="description">The server couldn&rsquo;t understand this request. Please check the address, or head back to the homepage to start again.</p>
+      <div class="actions">
+        <a class="home-link" href="index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 5-7 7 7 7M4 12h16"/></svg>
+          Back to home
+        </a>
+        <a class="text-link" href="index.html#works">View my work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="error-art" aria-hidden="true">
+      <div class="art-grid"></div>
+      <div class="art-circle"></div>
+      <div class="error-number">400</div>
+      <img class="avatar" src="assets/images/confused-avatar.png" alt="" width="398" height="398">
+      <span class="spark spark-one">+</span>
+      <span class="spark spark-two">+</span>
+      <span class="art-caption">let&rsquo;s take it from the top.</span>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p class="footer-note">A fresh start is one click away.</p>
+    <p>Steven Kruse &middot; UX/UI, Web &amp; Graphic Design</p>
+  </footer>
+</body>
+</html>
