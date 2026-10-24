@@ -1,0 +1,19 @@
+# Long cache for files whose names change when the bytes change.
+# CSS and JS keep a shorter cache because some of them are updated in place.
+/assets/images/*
+  Cache-Control: public, max-age=2592000
+
+/assets/videos/*
+  Cache-Control: public, max-age=2592000
+
+/assets/fonts/*
+  Cache-Control: public, max-age=2592000
+
+/assets/bootstrap/*
+  Cache-Control: public, max-age=2592000
+
+/assets/css/*
+  Cache-Control: public, max-age=604800
+
+/assets/js/*
+  Cache-Control: public, max-age=604800

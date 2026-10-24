@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
+# Drafts, backups, and scraped experiments are not pages to index.
+Disallow: /outputs/
+Disallow: /email-templates/
+Disallow: /ux-process/archive/
+Disallow: /ux-process/BETA/
+Disallow: /ux-process/BETA-v2/
+Disallow: /indexBAK2.html
+Disallow: /indexBAK3.html
+Disallow: /index1.html
+Disallow: /index-no-preloader.html
+Disallow: /index-with-preloader.html
+Disallow: /index-with-skill-icons.html
+Disallow: /assets/images/index.html
+Disallow: /assets/images/works/weather-code/
+
 Sitemap: https://www.stevenkruse.com/sitemap.xml

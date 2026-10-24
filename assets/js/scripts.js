@@ -21,6 +21,7 @@ Author: Steven Kruse
 jQuery(function ($) {
 
     'use strict';
+    $('a[title]').tooltips();
     // Preloader://
     $('#pre-status').fadeOut();
     $('#tt-preloader').delay(350).fadeOut('slow');
@@ -28,6 +29,7 @@ jQuery(function ($) {
     (function () {
         $('a[href^="#"]').bind("click", function(e){
             var anchor = $(this);
+            if (anchor.closest('#filter').length) return;
             var target = document.getElementById(anchor.attr('href').slice(1));
             if (!target) return;
 

@@ -247,6 +247,7 @@ button:focus {
 /*IMAGES*/
 img {
     width: 100%;
+    height: auto;
 }
 
 hr {
@@ -324,7 +325,7 @@ ul.list-check li::before {
 
 
 #home {
-	background: url(../images/home2.png) no-repeat center center;
+	background: url(../images/home2-poster.jpg) no-repeat center center;
 	-webkit-background-attachment: fixed;
     background-attachment: fixed;
 	background-color: #222;
@@ -1060,10 +1061,11 @@ Resume Timeline
     width: 25%;
     float: left;
 }
-.skill-title h5{
+.skill-title .skill-name {
     font-size: 16px;
     font-weight: 400;
-    margin-top: -5px;
+    line-height: 1.1;
+    margin: -5px 0 10px;
     text-transform: capitalize;
 }
 

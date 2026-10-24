@@ -19,4 +19,5 @@ $(document).ready(function(){
       }
     }]
   });
+  $('.customer-logos .slick-track').attr('aria-label', 'Client logos');
 });

@@ -473,6 +473,14 @@ html.logo-intro-pending .logo-intro {
     padding: 44px;
 }
 
+.portfolio-page .clients-intro {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+}
+
 .portfolio-page .skills-section .section-title,
 .portfolio-page .skills-section .section-title h2 {
     color: var(--glass-text);
