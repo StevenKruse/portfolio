@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
 <script src="assets/js/theme.js?v=20261020"></script>
+<script>
+/* Decide the logo intro before first paint. Hidden unless this class is present. */
+(function () {
+    var motion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (motion && motion.matches) return;
+    var hash = window.location.hash;
+    if (hash && hash !== '#home') return;
+    try {
+        if (window.sessionStorage.getItem('sk-logo-intro') === '1') return;
+        window.sessionStorage.setItem('sk-logo-intro', '1');
+    } catch (error) {
+        /* Storage can be blocked; the intro still plays once this load. */
+    }
+    document.documentElement.classList.add('logo-intro-pending');
+}());
+</script>
 <title>Steven Kruse | UX/UI, Web &amp; Graphic Designer</title>
 <meta name="description" content="Explore Steven Kruse's portfolio of UX/UI design, responsive websites, graphic design, and front-end development. Based in Rockwood, Michigan.">
 <meta name="author" content="Steven Kruse">
@@ -298,7 +314,7 @@ tooltip span {
     <link href="assets/css/carousel.css" rel="stylesheet">
     <!-- Light / dark theme -->
     <link href="assets/css/theme.css?v=20261020-glass-1" rel="stylesheet" media="screen">
-    <link href="assets/css/glass.css?v=20261021-video-glass-2" rel="stylesheet" media="screen">
+    <link href="assets/css/glass.css?v=20261024-motion" rel="stylesheet" media="screen">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -316,6 +332,52 @@ tooltip span {
 </head>
 
 <body class="portfolio-page">
+    <div id="logo-intro" class="logo-intro" style="display:none">
+        <button type="button" class="logo-intro-skip">Skip intro</button>
+        <div class="logo-intro-stage" aria-hidden="true">
+            <img src="assets/images/logo.png" alt="" width="266" height="29">
+            <span class="logo-intro-line"></span>
+        </div>
+    </div>
+    <script>
+    /* Remove the intro as soon as it finishes, and sooner if the visitor moves on. */
+    (function () {
+        var root = document.documentElement;
+        var intro = document.getElementById('logo-intro');
+        if (!intro || !root.classList.contains('logo-intro-pending')) return;
+
+        var done = false;
+        function finish() {
+            if (done) return;
+            done = true;
+            root.classList.remove('logo-intro-pending');
+            window.removeEventListener('keydown', onKey);
+            window.removeEventListener('wheel', finishFromGesture);
+            window.removeEventListener('touchstart', finishFromGesture);
+            if (intro.parentNode) intro.parentNode.removeChild(intro);
+        }
+        function onKey(event) {
+            if (event.key === 'Tab') return;
+            finish();
+        }
+
+        var gesturesArmed = false;
+        function finishFromGesture() {
+            if (!gesturesArmed) return;
+            finish();
+        }
+
+        window.setTimeout(function () { gesturesArmed = true; }, 280);
+        window.setTimeout(finish, 1500);
+        intro.addEventListener('click', finish);
+        window.addEventListener('keydown', onKey);
+        window.addEventListener('wheel', finishFromGesture, { passive: true });
+        window.addEventListener('touchstart', finishFromGesture, { passive: true });
+        intro.addEventListener('animationend', function (event) {
+            if (event.target === intro) finish();
+        });
+    }());
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ4Q9WT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -334,6 +396,11 @@ tooltip span {
         var preloader = document.getElementById('tt-preloader');
         var dismissed = false;
         var fallback;
+
+        if (document.documentElement.classList.contains('logo-intro-pending')) {
+            preloader.style.display = 'none';
+            return;
+        }
 
         function dismissPreloader() {
             if (dismissed) return;
@@ -3012,7 +3079,7 @@ function myFunction() {
   <script src="assets/js/jquery.shuffle.min.js"></script>
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="assets/js/jquery.fitvids.js"></script>
-  <script src="assets/js/scripts.js?v=20261022-home-video"></script>
+  <script src="assets/js/scripts.js?v=20261024-motion"></script>
   <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  
 </body>

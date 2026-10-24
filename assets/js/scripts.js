@@ -99,35 +99,63 @@ jQuery(function ($) {
             }
         });
     }());
-    // Countup: //
-    $('.count-wrap').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $(this).find('.timer').each(function () {
+    // Skill bars, counters, and charts — once, as each block enters view.
+    (function () {
+        var motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+
+        function reducedMotion() {
+            return !!(motionQuery && motionQuery.matches);
+        }
+
+        function setBarWidths(root, animate) {
+            var bars = (root || document).querySelectorAll('.progress-bar');
+            Array.prototype.forEach.call(bars, function (bar, index) {
+                var value = bar.getAttribute('aria-valuenow');
+                if (!value || bar.getAttribute('data-bar-set') === '1') return;
+                bar.setAttribute('data-bar-set', '1');
+                var apply = function () {
+                    bar.style.width = value + '%';
+                };
+                if (!animate || reducedMotion()) {
+                    bar.style.transition = 'none';
+                    apply();
+                    return;
+                }
+                window.setTimeout(apply, Math.min(index, 9) * 70);
+            });
+        }
+
+        function countUp(wrap) {
+            $(wrap).find('.timer').each(function () {
                 var $this = $(this);
-                $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                    duration: 2000,
+                var target = $.trim($this.text());
+                if ($this.data('counted')) return;
+                $this.data('counted', true);
+                if (reducedMotion()) return;
+                $({ Counter: 0 }).animate({ Counter: target }, {
+                    duration: 1600,
                     easing: 'swing',
                     step: function () {
                         $this.text(Math.ceil(this.Counter));
+                    },
+                    complete: function () {
+                        $this.text(target);
                     }
                 });
             });
-            $(this).unbind('inview');
         }
-    });
-    // Progress Bar: //
-    $('.skill-progress').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $.each($('div.progress-bar'),function(){
-                $(this).css('width', $(this).attr('aria-valuenow')+'%');
-            });
-            $(this).unbind('inview');
-        }
-    });
-    // More Skill: //
-    $('.more-skill').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $('.chart').easyPieChart({
+
+        function drawCharts(animate) {
+            var $charts = $('.more-skill .chart');
+            if (!$charts.length || $charts.data('drawn')) return;
+            $charts.data('drawn', true);
+            if (!animate || reducedMotion()) {
+                $charts.each(function () {
+                    var percent = parseFloat($(this).attr('data-percent'));
+                    if (!isNaN(percent)) $(this).find('.percent').text(Math.round(percent));
+                });
+            }
+            $charts.easyPieChart({
                 easing: 'easeOut',
                 delay: 3000,
                 barColor:'#68c3a3',
@@ -135,15 +163,49 @@ jQuery(function ($) {
                 scaleColor: false,
                 lineWidth: 8,
                 size: 140,
-                animate: 2000,
+                animate: (!animate || reducedMotion()) ? false : 1600,
                 onStep: function(from, to, percent) {
                     this.el.children[0].innerHTML = Math.round(percent);
                 }
-
             });
-            $(this).unbind('inview');
         }
-    });
+
+        function watch(selector, onEnter) {
+            var nodes = document.querySelectorAll(selector);
+            if (!nodes.length) return;
+            if (window.IntersectionObserver) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        onEnter(entry.target);
+                        observer.unobserve(entry.target);
+                    });
+                }, { rootMargin: '0px 0px -8% 0px', threshold: 0.15 });
+                Array.prototype.forEach.call(nodes, function (node) {
+                    observer.observe(node);
+                });
+                return;
+            }
+            $(nodes).bind('inview', function (event, visible) {
+                if (!visible) return;
+                onEnter(this);
+                $(this).unbind('inview');
+            });
+        }
+
+        if (reducedMotion()) {
+            setBarWidths(document, false);
+            drawCharts(false);
+        } else {
+            watch('#skills', function () {
+                setBarWidths(document.getElementById('skills'), true);
+            });
+            watch('.more-skill', function () {
+                drawCharts(true);
+            });
+        }
+        watch('.count-wrap', countUp);
+    }());
     // Shuffle: //
     (function () {
 
@@ -274,7 +336,7 @@ jQuery(function ($) {
 
         // Observe the inner gallery frame, leaving Shuffle's item transforms alone.
         // A panel's children share its reveal instead of animating a second time.
-        var $cards = $('.portfolio-page .glass-panel, .portfolio-page .portfolio-bg, .portfolio-page .section-title').filter(function () {
+        var $cards = $('.portfolio-page .glass-panel, .portfolio-page .portfolio-bg, .portfolio-page .section-title, .portfolio-page .resume-title').filter(function () {
             return !$(this).closest('#home, .modal').length && !$(this).parents('.glass-panel').length;
         });
         var observer = new IntersectionObserver(function (entries) {
